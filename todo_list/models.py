@@ -7,6 +7,7 @@ class Todo_item(models.Model):
 
 
     class Meta:
+        ordering = ["id"]
         verbose_name = 'Todo Item'
         verbose_name_plural = 'Todo Items'
 

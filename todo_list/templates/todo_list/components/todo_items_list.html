@@ -1,0 +1,21 @@
+{% extends "todo_list/base.html" %}
+
+{% block title %}
+    ToDo List 
+{% endblock title %}
+
+{% block body %}
+    <h3>ToDos:</h3>
+    <ul>
+        {% for todo_item in todo_items %}
+            <li>
+                {{ todo_item.title }}
+                {% if todo_item.done %}
+                 - Сделано
+                {% else %}
+                 - Не сделано
+                {% endif %}    
+            </li>
+        {% endfor %} 
+    </ul>       
+{% endblock  %}
