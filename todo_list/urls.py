@@ -10,7 +10,7 @@ app_name = "todo_list"
 
 urlpatterns = [
     path("", views.index_view, name="index"),
-    path("todo_list/", views.Todo_List_Index_View.as_view(), name="todo_list"),
+    #path("todo_list/", views.Todo_List_Index_View.as_view(), name="todo_list"),
     path("list/", views.Todo_List_View.as_view(), name="list"),
 
 ]

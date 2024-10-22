@@ -5,9 +5,18 @@
 {% endblock title %}
 
 {% block body %}
-<h1>
-    Todo List App
-</h1>
+    <h1>Todo List App</h1>
     <h2>ToDos:<h2>
-        {% include "todo_list/components/todo_items_list.html" %}    
+    <ul>
+      {% for todo_item in todo_items %}
+        <li>
+          {{ todo_item.title }}
+          {% if todo_item.done %}
+          - Ок
+          {% else %}
+          - Wait
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
 {% endblock  %}
